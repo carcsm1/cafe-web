@@ -1,0 +1,68 @@
+{% extends 'bootstrap/base.html' %}
+
+{% block title %}Add A New Cafe{% endblock %}
+
+{% block content %}
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12 col-md-8">
+
+      <h1>Add a new cafe into the database</h1>
+        <form action="/added" method="post">
+          <div class="form-group">
+            <label for="CafeName">Cafe Name</label>
+            <input class="form-control" name="cafename">
+          </div>
+          <div class="form-group">
+            <label for="CafeLoc">Cafe Location in Google Maps</label>
+            <input class="form-control" name="location">
+          </div>
+          <div class="form-group">
+            <label for="CafeLoc">Opening Time</label>
+            <input class="form-control" name="optime">
+          </div>
+          <div class="form-group">
+            <label for="CafeLoc">Closing Time</label>
+            <input class="form-control" name="cltime">
+          </div>
+          <div class="form-group">
+            <label for="exampleFormControlSelect1">Coffee Rating</label>
+            <select class="form-control" name="crating">
+              <option>☕</option>
+              <option>☕☕</option>
+              <option>☕☕☕</option>
+              <option>☕☕☕☕</option>
+              <option>☕☕☕☕☕</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="exampleFormControlSelect1">Wifi Rating</label>
+            <select class="form-control" name="wrating">
+              <option>✘</option>
+              <option>💪</option>
+              <option>💪💪</option>
+              <option>💪💪💪</option>
+              <option>💪💪💪💪</option>
+              <option>💪💪💪💪💪</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="exampleFormControlSelect1">Power socker</label>
+            <select class="form-control" name="srating">
+              <option>🔌</option>
+              <option>🔌🔌</option>
+              <option>🔌🔌🔌</option>
+              <option>🔌🔌🔌🔌</option>
+              <option>🔌🔌🔌🔌🔌</option>
+            </select>
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+
+	  <p class="space-above"><a href="{{ url_for('cafes') }}">See all cafes</a></p>
+
+    </div>
+  </div>
+</div>
+
+{% endblock %}
